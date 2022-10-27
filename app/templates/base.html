@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script type="text/javascript" src="/static/js/charts.js"></script>
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/base.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="all_charts">
+    <div id="donut_chart_container"></div>
+    <div id="tag_cloud_container"></div>
+    <div id="articles_by_years_container"></div>
+</div>
+
+
+
+<script>
+    anychart.onDocumentReady(function () {
+        // Круговая диаграмма
+        draw_donut_chart();
+        // Теги
+        draw_tag_cloud();
+        // Кол-ов статей по годам
+        draw_articles_by_year();
+    });
+</script>
+</body>
+</html>
